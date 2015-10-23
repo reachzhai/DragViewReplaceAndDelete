@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:text="当前的内容：(可以左右拖动进行排序)"
+        android:textColor="#ffffff"
+        android:gravity="center_vertical"
+        android:background="#444444"/>
+    <cn.kenneth.dragviewanddelete.DragGridView
+        android:id="@+id/dragGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+        app:drag_last_position="true"
+        android:verticalSpacing="10dp"
+        app:drag_scale="1.05"
+        app:drag_start_position="0"
+        app:vibrator="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:text="下面的图标可以拖到上面的内容里"
+        android:gravity="center_vertical"
+        android:background="#444444"/>
+
+    <cn.kenneth.dragviewanddelete.DragGridView
+        android:id="@+id/dragGridView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+        app:drag_last_position="true"
+        android:verticalSpacing="10dp"
+        app:drag_scale="1.05"
+        app:drag_start_position="0"
+        app:scale_mill="200"
+        app:vibrator="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:text="拖入这里删除"/>
+
+</LinearLayout>
